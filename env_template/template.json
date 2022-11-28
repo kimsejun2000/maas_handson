@@ -199,6 +199,9 @@
             "type": "Microsoft.Compute/virtualMachines/extensions",
             "location": "[parameters('location')]",
             "apiVersion": "2015-06-15",
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
+            ],
             "properties": {
               "publisher": "Microsoft.Compute",
               "type": "CustomScriptExtension",

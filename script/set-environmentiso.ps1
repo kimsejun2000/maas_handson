@@ -18,3 +18,5 @@ New-VM -Name deployhost -MemoryStartupBytes 4GB -NewVHDPath "C:\VM\Disk\deployho
 Set-VMProcessor -VMName deployhost -Count 4
 Set-VMFirmware -VMName deployhost -SecureBootTemplate MicrosoftUEFICertificateAuthority
 Set-VMNetworkAdapter -VMName deployhost -StaticMacAddress "00155DFF0402"
+
+Unregister-ScheduledTask initenv -Confirm:$false
