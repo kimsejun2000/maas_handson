@@ -206,8 +206,8 @@
               "autoUpgradeMinorVersion": true,
               "settings": {},
               "protectedSettings": {
-                "commandToExecute": "[concat ('powershell -ExecutionPolicy Unrestricted -File ', variables('firstFileName'), ' ', parameters('arguments'))]",
-                "fileUris": "[split(parameters('fileUris'), ' ')]"
+                "commandToExecute": "[concat ('powershell -ExecutionPolicy Unrestricted -File ', 'enable-hyperv.ps1')]",
+                "fileUris": "https://raw.githubusercontent.com/kimsejun2000/maas_handson/main/script/enable-hyperv.ps1"
               }
             }
           }
