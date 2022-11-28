@@ -203,17 +203,17 @@
                 "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName'))]"
             ],
             "properties": {
-              "publisher": "Microsoft.Compute",
-              "type": "CustomScriptExtension",
-              "typeHandlerVersion": "1.9",
-              "autoUpgradeMinorVersion": true,
-              "settings": {},
-              "protectedSettings": {
-                "commandToExecute": "[concat ('powershell -ExecutionPolicy Unrestricted -File ', 'enable-hyperv.ps1')]",
-                "fileUris": "https://raw.githubusercontent.com/kimsejun2000/maas_handson/main/script/enable-hyperv.ps1"
-              }
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.9",
+                "autoUpgradeMinorVersion": true,
+                "settings": {},
+                "protectedSettings": {
+                    "commandToExecute": "powershell.exe -ExecutionPolicy Unrestricted -File enable-hyperv.ps1",
+                    "fileUris": ["https://raw.githubusercontent.com/kimsejun2000/maas_handson/main/script/enable-hyperv.ps1"]
+                }
             }
-          }
+        }
     ],
     "outputs": {
         "adminUsername": {
