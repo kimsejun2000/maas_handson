@@ -1,3 +1,9 @@
+# Download disk file for maas VM
+New-Item -Path "C:\" -Name VM -ItemType directory
+New-Item -Path "C:\VM\" -Name Disk -ItemType directory
+
+Invoke-WebRequest -Uri "https://ubuconmasstemplate.blob.core.windows.net/vmdisk/maas.vhdx" -OutFile "C:\VM\Disk\maas.vhdx"
+
 # Create Virtual Network
 New-VMSwitch -Name Internal -SwitchType Internal
 
